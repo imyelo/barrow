@@ -5,6 +5,14 @@ var addons = {
   number: function (val) {
     return +val;
   },
+  // 转布尔
+  bool: function (val) {
+    return !!val;
+  },
+  // 转字符串
+  string: function (val) {
+    return val + '';
+  },
   // 转时间戳
   timestamp: function (val) {
     if (+val + '' === val) {
