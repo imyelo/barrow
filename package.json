@@ -1,33 +1,33 @@
 {
-  "name": "barrow",
-  "version": "0.1.1",
-  "description": "## Usage ```  var origin ={   a: '3',   b: [     {       c: 'Peter'     },     {       c: 'Paul'     }   ],   d: {     e: '300'   },   f: -1 }; var mapping = {   user: Barrow.Types.repeat('b', {     name: 'c'   }),   _page: 'a',   _extra: {     status: 'd.e|number'   },   _ok: Barrow.Types.func(function (source) {     return source.f > -1;   }),   _from: Barrow.Types.val('barrow') }; console.log(Barrow(mapping).transfer(source)); // { //    user: [ //      { //        name: 'Peter' //      }, //      { //        name: 'Paul' //      } //    ], //    _page: '3', //    _extra: { //      status: 300 //    }, //    _ok: false, //    _from: 'barrow' //  }; ```",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "chai": "^2.1.1",
-    "underscore": "^1.8.2",
-    "moment": "^2.9.0"
-  },
-  "devDependencies": {
-    "mocha": "^2.2.1"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/imyelo/barrow.git"
-  },
-  "keywords": [
-    "map"
-  ],
-  "author": "yelo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/imyelo/barrow/issues"
-  },
-  "homepage": "https://github.com/imyelo/barrow"
+	"name": "barrow",
+	"version": "0.1.2",
+	"description": "## Usage ```  var origin ={   a: '3',   b: [     {       c: 'Peter'     },     {       c: 'Paul'     }   ],   d: {     e: '300'   },   f: -1 }; var mapping = {   user: Barrow.Types.repeat('b', {     name: 'c'   }),   _page: 'a',   _extra: {     status: 'd.e|number'   },   _ok: Barrow.Types.func(function (source) {     return source.f > -1;   }),   _from: Barrow.Types.val('barrow') }; console.log(Barrow(mapping).transfer(source)); // { //    user: [ //      { //        name: 'Peter' //      }, //      { //        name: 'Paul' //      } //    ], //    _page: '3', //    _extra: { //      status: 300 //    }, //    _ok: false, //    _from: 'barrow' //  }; ```",
+	"main": "index.js",
+	"directories": {
+		"test": "test"
+	},
+	"dependencies": {
+		"chai": "^2.1.1",
+		"underscore": "^1.8.2",
+		"moment": "^2.9.0"
+	},
+	"devDependencies": {
+		"mocha": "^2.2.1"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/imyelo/barrow.git"
+	},
+	"keywords": [
+		"map"
+	],
+	"author": "yelo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/imyelo/barrow/issues"
+	},
+	"homepage": "https://github.com/imyelo/barrow"
 }
