@@ -22,11 +22,11 @@ var addons = {
   },
   // 分转元
   yuan: function (val) {
-    return val / 100;
+    return +(val / 100).toFixed(2);
   },
   // 元转分
   fen: function (val) {
-    return val * 100;
+    return +(val * 100).toFixed(0);
   }
 };
 
