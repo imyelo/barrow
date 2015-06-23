@@ -15,6 +15,9 @@ var addons = {
   },
   // 转时间戳
   timestamp: function (val) {
+    if (typeof val === 'undefined') {
+      return 0;
+    }
     if (+val + '' === val) {
       return +val;
     }
