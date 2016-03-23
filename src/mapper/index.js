@@ -41,6 +41,9 @@ var resolve = function (source, path) {
   var result = source;
   var pathes = path.split('.');
   _.each(pathes, function (path) {
+    if (result === null) {
+      return result = {};
+    }
     if (typeof result === 'object') {
       result = result[path];
     }

@@ -239,7 +239,10 @@ describe('Barrow', function () {
       d: {
         e: '300'
       },
-      f: -1
+      f: -1,
+      g: {
+        h: null
+      }
     };
     var expected = {
       user: [
@@ -255,7 +258,8 @@ describe('Barrow', function () {
         status: 300
       },
       _ok: false,
-      _from: 'barrow'
+      _from: 'barrow',
+      _message: {}
     };
     var mapping = {
       user: Barrow.Types.repeat('b', {
@@ -268,7 +272,8 @@ describe('Barrow', function () {
       _ok: Barrow.Types.func(function (source) {
         return source.f > -1;
       }),
-      _from: Barrow.Types.val('barrow')
+      _from: Barrow.Types.val('barrow'),
+      _message: 'g.h.notexist'
     };
     expect(Barrow(mapping).transfer(origin)).to.be.deep.equal(expected);
   });
