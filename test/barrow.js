@@ -81,6 +81,40 @@ describe('Barrow', function () {
     expect(Barrow(mapping).transfer(origin)).to.be.deep.equal(expected);
   });
 
+  it('tunnel-string', function () {
+    var origin = {
+      a: '3',
+      b: 3,
+      c: 0,
+      d: false,
+      e: true,
+      f: [],
+      h: null,
+      i: void 0
+    };
+    var expected = {
+      string: '3',
+      number: '3',
+      zero: '0',
+      false: 'false',
+      true: 'true',
+      array: '',
+      null: '',
+      undefined: ''
+    };
+    var mapping = {
+      string: 'a|string',
+      number: 'b|string',
+      zero: 'c|string',
+      false: 'd|string',
+      true: 'e|string',
+      array: 'f|string',
+      null: 'h|string',
+      undefined: 'i|string'
+    };
+    expect(Barrow(mapping).transfer(origin)).to.be.deep.equal(expected);
+  });
+
   it('array', function () {
     var origin = {
       b: [

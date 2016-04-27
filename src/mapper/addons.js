@@ -11,7 +11,7 @@ var addons = {
   },
   // 转字符串
   string: function (val) {
-    return val + '';
+    return typeof val === 'undefined' || val === null ? '' : val + '';
   },
   // 转时间戳
   timestamp: function (val) {
